@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mater</title>
+  </head>
+  <body>
+    <div class="content">
+      <h2>Mater</h2>
+      <h1>Let's find you a friend</h1>
+      <div class="newButton">
+        <button class="searchAgain" onclick="FormHandler.regenerate()">Reset</button>
+        <button class="showAll" onclick="FormHandler.showAllCombinations()"> Search another friend</button>
+      </div>
+      <div class="formUser">
+        <form id="myForm">
+          <div>
+            <label for="nickName">Nickname</label>
+            <input type="text" id="nickName" /> <br />
+          </div>
+          <div class="first-last">
+            <div class="first">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" /> <br />
+            </div>
+            <div class="last">
+              <label for="firstName">Last Name</label>
+              <input type="text" id="lastName" /> <br />
+            </div>
+          </div>
+          <div>
+            <label for="firstName">Age</label>
+            <input type="text" id="age" /> <br />
+          </div>
+          <div>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <br />
+          </div>
+          <div>
+            <label for="firstName">Hobby</label>
+            <input type="text" id="hobby" /> <br />
+          </div>
+          <div>
+            <label for="firstName">Movie Genre</label>
+            <input type="text" id="movie" /> <br />
+          </div>
+          <div>
+            <label for="firstName">Pet</label>
+            <input type="text" id="pet" /> <br />
+          </div>
+          <div>
+            <label for="firstName">Food</label>
+            <input type="text" id="food" /> <br />
+          </div>
+          <button
+            type="button"
+            onclick="FormHandler.createPersonFromForm()"
+            ondblclick=""
+            class="button"
+          >
+            Find Your Friend
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="result">
+      <h1 class="resultsText" id="resultsText">NO ONE WANT TO BE YOUR FRIEND ;( (LOL)</h1>
+      <div class="outputContainer" id="outputContainer"></div>
+      <div class="detailOverlay">
+        <div class="detailPerson"></div>
+      </div>  
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
